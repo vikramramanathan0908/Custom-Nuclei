@@ -1,0 +1,25 @@
+Name: Nuclei
+Technology: standalone
+Type: active
+Engine: golang
+Description: Custom Nuclei templates for enhanced security scanning.
+UploadEnabled: true
+UploadSource: nuclei-results/nuclei-results.json
+IgnoreOutput: true
+ScanType: nuclei
+DefaultTemplate: true
+WorkflowTemplate: true
+CustomTemplate: true
+TemplatePaths:
+  - attacktemplate/custom-nuclei-templates
+  - attacktemplate/workflow-templates
+UploadFileFormats:
+  - json
+Charset: UTF-8
+Tags:
+  cloud: nuclei,api
+  Type: Blackbox, Webscan
+Params:
+  Target: '{{.Target}}'
+  Command: ''
+
